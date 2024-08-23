@@ -11,6 +11,7 @@ editor_options:
 ```{r}
 library(tidyverse)
 library(palmerpenguins)
+library(itstaken)
 ```
 
 ### Create a plot
@@ -26,4 +27,11 @@ ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
         panel.grid.minor = element_line(color = "cyan")
         )
 ```
+
+```{r}
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme_eighties()
+```
+
 
