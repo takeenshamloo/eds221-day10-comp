@@ -1,0 +1,29 @@
+---
+Title: "Day 10: Interactive"
+format: html
+author: "Takeen Shamloo"
+editor_options: 
+  chunk_output_type: console
+---
+
+## Day 10: Interactive
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+### Create a plot
+
+```{r}
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point() +
+  theme(title = element_text(size = 16, color = "purple"),
+        plot.background = element_rect(fill = "black"),
+        panel.background = element_rect(fill = "gray20"),
+        axis.text = element_text(color = "yellow"),
+        panel.grid.major = element_line(color = "blue"),
+        panel.grid.minor = element_line(color = "cyan")
+        )
+```
+
